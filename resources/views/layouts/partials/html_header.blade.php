@@ -68,7 +68,7 @@
 
 @endif
 
-@if(Route::is('reg'))
+@if(Route::is('register'))
     <style type="text/css">
         .form-signup {
             max-width: 330px;
