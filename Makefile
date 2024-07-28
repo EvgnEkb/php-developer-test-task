@@ -23,6 +23,9 @@ shell: ## Start shell into app container
 migrate: ## Migrate application database and generate seeds
 	docker-compose run $(DC_RUN_ARGS) app ./artisan migrate --force --seed
 
+migrate-rollback:
+	docker-compose run $(DC_RUN_ARGS) app ./artisan migrate:rollback
+
 test: ## Execute app tests
 	docker-compose run $(DC_RUN_ARGS) app composer test
 
