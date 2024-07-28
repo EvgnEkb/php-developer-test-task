@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', static function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/login', static function () {
+    return view('login');
+})->name('login');
+
+Route::get('/reg', static function () {
+    return view('reg');
+})->name('reg');
+
+Route::get('/reg-success', static function () {
+    return view('reg_success');
+})->name('reg-success');
