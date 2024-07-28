@@ -10,7 +10,7 @@
                     <a href="{{ url('/login') }}">Авторизация</a>
                 </li>
                 <li class="{{ request()->is('/register') ? 'active' : null }}">
-                    <a href="{{ url('/reg') }}">Регистрация</a>
+                    <a href="{{ url('/register') }}">Регистрация</a>
                 </li>
             @endguest
         </ul>
