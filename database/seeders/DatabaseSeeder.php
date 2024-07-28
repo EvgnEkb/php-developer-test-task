@@ -13,6 +13,9 @@ class DatabaseSeeder extends \Illuminate\Database\Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            UserTableSeeder::class,
+            MessageTableSeeder::class,
+        ]);
     }
 }
