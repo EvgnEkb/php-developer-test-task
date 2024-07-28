@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', static function () {
-    return view('index');
-});
-
-Route::get('/login', static function () {
-    return view('login');
-})->name('login');
-
-Route::get('/reg', static function () {
-    return view('reg');
-})->name('reg');
+Route::resource('messages', MessageController::class);
+Route::get('/gravatar', 'App\Http\Controllers\GravatarController@gravatar');
+Route::get('/', 'App\Http\Controllers\MessageController@index');
+Route::get('/messages/delete/{id}', 'App\Http\Controllers\MessageController@delete')->name('messages.delete');
 
 Route::get('/reg-success', static function () {
     return view('reg_success');

@@ -23,6 +23,7 @@ class User extends \Illuminate\Foundation\Auth\User
         'name',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
