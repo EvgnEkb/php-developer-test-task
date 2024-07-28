@@ -1,5 +1,5 @@
 parameters:
-  level: 4 # Set level 'max' if you can ;)
+  level: 1 # Set level 'max' if you can ;)
   paths:
     - app
     - routes
