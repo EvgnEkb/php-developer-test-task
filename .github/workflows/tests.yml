@@ -52,7 +52,11 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         #env:
         #  DB_HOST: 127.0.0.1
         #  DB_PORT: 5432
-
+      - name: Run unit tests via PHPUnit
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: ./vendor/bin/phpunit
   #docker-image:
   #  name: Build docker image
   #  runs-on: ubuntu-latest
