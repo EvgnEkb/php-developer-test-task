@@ -2,7 +2,7 @@
   <img alt="avtocod" src="https://hsto.org/webt/r_/m4/yf/r_m4yf2iybb85maogtsj5vzxxes.png" width="128" />
 </p>
 
-# Тестовое задание для PHP-разработчика
+# Доска сообщений
 
 ![Project language][badge_language]
 [![Build Status][badge_build]][link_build]
