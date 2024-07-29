@@ -20,7 +20,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         uses: shivammathur/setup-php@v2 # Action page: <https://github.com/shivammathur/setup-php>
         with:
           php-version: 7.4
-
+          extensions: php7.4-curl
       #- name: Start PostgreSQL server
       #  run: |
       #    docker run --rm -d \
