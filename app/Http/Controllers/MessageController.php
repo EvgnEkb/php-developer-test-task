@@ -42,7 +42,7 @@ class MessageController extends Controller
     {
         $this->messageService->make($request);
 
-        return redirect()->route('/')->with('status', 'Сообщение удачно создано');
+        return redirect()->route('home')->with('status', 'Сообщение удачно создано');
     }
 
     /**

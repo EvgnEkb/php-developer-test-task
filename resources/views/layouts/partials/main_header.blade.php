@@ -6,10 +6,10 @@
         <ul class="nav navbar-nav">
             <li class="{{ request()->is('/') ? 'active' : null }}"><a href="{{ url('/') }}">Главная</a></li>
             @guest
-                <li class="{{ request()->is('/login') ? 'active' : null }}">
+                <li class="{{ request()->is('login') ? 'active' : null }}">
                     <a href="{{ url('/login') }}">Авторизация</a>
                 </li>
-                <li class="{{ request()->is('/register') ? 'active' : null }}">
+                <li class="{{ request()->is('register') ? 'active' : null }}">
                     <a href="{{ url('/register') }}">Регистрация</a>
                 </li>
             @endguest
