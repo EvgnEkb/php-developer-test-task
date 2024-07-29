@@ -24,8 +24,10 @@ $ make test
 
 Данные админа для входа:
 
+```bash
 Логин: admin@admin.ru
 Пароль: secret
+```
 
 [badge_build]:https://img.shields.io/github/workflow/status/avtocod/php-developer-test-task/tests/master
 [badge_language]:https://img.shields.io/badge/language-php_7.4.x-blue.svg?longCache=true
