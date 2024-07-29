@@ -1,13 +1,13 @@
 <form action="{{ route('messages.store') }}" method="POST" class="form-horizontal">
     @csrf
-
-    @if ($errors->any())
+    @if ($errors->has('text'))
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <strong>Ошибка!</strong> Сообщение не может быть пустым.
+            @if($errors->has('text'))
+                <strong>Ошибка!</strong> Сообщение не может быть пустым.
+            @endif
         </div>
     @endif
-
     <div class="controls">
         <div class="col-md-12">
             <div class="form-group">

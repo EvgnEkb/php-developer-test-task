@@ -18,7 +18,7 @@ class MessageService
     {
         return Message::with('author')
             ->orderByDesc('created_at')
-            ->paginate(100);
+            ->paginate(10);
     }
 
     /**
@@ -45,7 +45,7 @@ class MessageService
      */
     public function delete(int $id): \Illuminate\Http\RedirectResponse
     {
-        $message = Message::query()->findOrFail($id)->first();
+        $message = Message::query()->find($id);
 
         if ($message->user_id === Auth::id() || Auth::user()->is_admin) {
             Message::destroy($id);
@@ -56,7 +56,7 @@ class MessageService
         return redirect()
             ->route('messages.index')
             ->withErrors([
-                'notDelete' => 'Вы можете удалять только свои посты',
+                'deleteError' => 'Вы можете удалять только свои посты',
             ]);
 
     }

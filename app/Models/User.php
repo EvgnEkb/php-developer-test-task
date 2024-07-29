@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -44,4 +45,9 @@ class User extends \Illuminate\Foundation\Auth\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function currentUserIsAdmin(): bool
+    {
+        return Auth::check() && Auth::user()->is_admin;
+    }
 }

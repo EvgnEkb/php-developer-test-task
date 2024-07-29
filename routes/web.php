@@ -15,10 +15,12 @@ use App\Http\Controllers\MessageController;
 */
 
 Route::resource('messages', MessageController::class);
-Route::get('/gravatar', 'App\Http\Controllers\GravatarController@gravatar');
-Route::get('/', 'App\Http\Controllers\MessageController@index');
 Route::get('/messages/delete/{id}', 'App\Http\Controllers\MessageController@delete')->name('messages.delete');
+Route::get('/', 'App\Http\Controllers\MessageController@index')->name('home');
 
+Route::get('/gravatar', 'App\Http\Controllers\GravatarController@gravatar');
+
+Route::post('/register', 'App\Http\Controllers\RegisteredUserController@store');
 Route::get('/reg-success', static function () {
     return view('reg_success');
 })->name('reg-success');
