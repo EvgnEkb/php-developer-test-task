@@ -22,6 +22,11 @@ $ make up
 $ make test
 ```
 
+Данные админа для входа:
+
+Логин: admin@admin.ru
+Пароль: secret
+
 [badge_build]:https://img.shields.io/github/workflow/status/avtocod/php-developer-test-task/tests/master
 [badge_language]:https://img.shields.io/badge/language-php_7.4.x-blue.svg?longCache=true
 [badge_use_template]:https://img.shields.io/badge/start-using_this_template-success.svg?longCache=true
